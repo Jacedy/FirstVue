@@ -3,6 +3,8 @@
 <template>
   <div id="app">
     <!-- <img src="./assets/logo.png"> -->
+
+    <!-- 路由出口 组件渲染容器 -->
     <router-view/>
   </div>
 </template>

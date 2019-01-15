@@ -1,9 +1,10 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import HelloWorld from '@/components/HelloWorld'
-import Test from '@/components/Test'    // 组件的路径地址
+import HelloWorld from '@/components/HelloWorld'  // 组件的路径地址
 import ElementUI from '@/components/ElementUITest'
-import Test2 from '@/components/Test2'
+import Test from '@/components/VueTest'    
+import Test2 from '@/components/VueTest2'
+import TestExp from '@/components/VueExp'    
 import HtmlTest from '@/components/HtmlTest'
 import FlexTest from '@/components/FlexTest'
 import CSSTest from '@/components/CSSTest'
@@ -23,14 +24,19 @@ export default new Router({
       component: Test   // 组件名称，要和import中引入的一样
     },
     {
+      path: '/test2',
+      name: "Test2",
+      component: Test2
+    },
+    {
       path: '/elementui',
       name: "ElementUI",
       component: ElementUI
     },
     {
-      path: '/test2',
-      name: "Test2",
-      component: Test2
+      path: '/testexp',
+      name: "TestExp",
+      component: TestExp
     },
     {
       path: '/htmltest',

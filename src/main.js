@@ -21,7 +21,7 @@ Vue.use(ElementUI)
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
-  router,
+  router,   // 挂载
   components: { App },
   template: '<App/>'
 })
