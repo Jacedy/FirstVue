@@ -7,6 +7,7 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+import store from './components/storeTest/store'
 import ElementUI from 'element-ui'
 // import { Button, Select } from 'element-ui'//这里我们仅引用了Button, Select这两个组件
 import 'element-ui/lib/theme-chalk/index.css'
@@ -22,6 +23,7 @@ Vue.use(ElementUI)
 new Vue({
   el: '#app',
   router,   // 挂载
+  store,    // 注入到根实例中
   components: { App },
   template: '<App/>'
 })

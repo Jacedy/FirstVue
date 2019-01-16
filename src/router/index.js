@@ -8,6 +8,7 @@ import TestExp from '@/components/VueExp'
 import HtmlTest from '@/components/HtmlTest'
 import FlexTest from '@/components/FlexTest'
 import CSSTest from '@/components/CSSTest'
+import StoreTest from '@/components/storeTest/storeMain'
 
 Vue.use(Router)
 
@@ -52,6 +53,11 @@ export default new Router({
       path: '/csstest',
       name: "CSSTest",
       component: CSSTest
+    },
+    {
+      path: '/storetest',
+      name: "StoreTest",
+      component: StoreTest
     }
   ]
 })

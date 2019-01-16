@@ -17,8 +17,15 @@
       >{{item}}</li>
     </ul>
 
+    <!-- 绑定value到Vue实例的一个动态属性上 -->
     <input type="checkbox" v-model="toggle" v-bind:true-value="a" v-bind:false-value="b">
     <p>{{toggle}}</p>
+
+    <!-- 实现多个根据不同条件显示不同文字的方法 -->
+    <div id="test">
+      <input type="text" v-model="inputValue">
+      <h1>{{changeVaule}}</h1>
+    </div>
   </div>
 </template>
 
@@ -31,12 +38,29 @@ export default {
       activeId: 0,
       a: "a",
       b: "b",
-      toggle: ''
+      toggle: "",
+      changeVaule: "123"
     };
   },
   methods: {
     change(e) {
       console.log(e.target.value);
+    },
+    operateArray: function (array) {
+      array.$set(0, "e")
+      array.$remove("b")
+      
+      this.list.$set(1, "t")
+      this.$set('toggle', "c")
+    }
+  },
+  computed: {
+    changeVaule: function() {
+      if (this.inputValue !== "") {
+        return this.inputValue;
+      } else {
+        return "empty";
+      }
     }
   }
 };
