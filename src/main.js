@@ -12,18 +12,16 @@ import ElementUI from 'element-ui'
 // import { Button, Select } from 'element-ui'//这里我们仅引用了Button, Select这两个组件
 import 'element-ui/lib/theme-chalk/index.css'
 // import 'element-ui/lib/theme-chalk/button.css'
-// import 'element-ui/lib/theme-chalk/input.css'
 
 Vue.config.productionTip = false
 Vue.use(ElementUI)
 // Vue.use(Button)
-// Vue.use(Select)
 
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
   router,   // 挂载
-  store,    // 注入到根实例中
+  store,    // 把 store 的实例注入所有的子组件
   components: { App },
   template: '<App/>'
 })
