@@ -9,12 +9,37 @@
 <script>
 // 在单独构建的版本中辅助函数为 Vuex.mapState
 import { mapState } from "vuex";
+import { Message } from "element-ui";
 
 export default {
   methods: {
     add() {
       // this.$store.commit('setCount', this.$store.state.count + 1)
       this.$store.dispatch("inc");
+
+      // element-ui 消息提示
+      // this.$message("这是一条消息提示");
+      // this.$message({
+      //   message: "这是一条成功消息",
+      //   type: "success" // 显示「成功、警告、消息、错误」类的操作反馈
+      // });
+      // this.$message({
+      //   message: "这是一条警告消息",
+      //   type: "warning"
+      // });
+      // this.$message.error("这是一条错误消息");
+      this.$message({
+        showClose: true, // 添加关闭按钮
+        message: "这是一条消息提示"
+      });
+      // this.$message({
+      //   message: "居中的文字",
+      //   center: true // 使用 center 属性让文字水平居中
+      // });
+      // this.$message({
+      //   dangerouslyUseHTMLString: true, // message 属性支持传入 HTML 片段
+      //   message: "<strong>这是 <i>HTML</i> 片段</strong>"
+      // });
     },
     reduce() {
       // this.$store.commit('setCount', this.$store.state.count - 1)
@@ -23,7 +48,7 @@ export default {
     reset() {
       this.$store.dispatch("reset");
     }
-  },
+  }
   // computed: mapState({
   //   // 箭头函数可使代码更简练
   //   count: state => state.count,
