@@ -24,20 +24,20 @@ export default new Router({
       name: "Test",
       component: Test   // 组件名称，要和import中引入的一样
     },
-    {
-      path: '/i',
-      redirect: '/index'  // 重定向，这样进/ 就会跳转到/index
-    },
-    {
-      path: '/in',
-      component: index,
-      children: [       // 嵌套路由
-        {
-          path: 'info',   // 通过 /index/info 就可以访问到info组件了
-          component: info
-        }
-      ]
-    },
+    // {
+    //   path: '/i',
+    //   redirect: '/index'  // 重定向，这样进/ 就会跳转到/index
+    // },
+    // {
+    //   path: '/in',
+    //   component: index,
+    //   children: [       // 嵌套路由
+    //     {
+    //       path: 'info',   // 通过 /index/info 就可以访问到info组件了
+    //       component: info
+    //     }
+    //   ]
+    // },
     // { 
     //   path: '/hello', 
     //   component: resolve => require(['./hello.vue'], resolve)   // 懒加载。通过懒加载就不会一次性把所有组件都加载进来，而是当你访问到那个组件的时候才会加载那一个。
