@@ -39,7 +39,7 @@ export default {
       a: "a",
       b: "b",
       toggle: "",
-      changeVaule: "123"
+      inputValue: "123"
     };
   },
   methods: {

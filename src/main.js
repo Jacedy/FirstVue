@@ -20,7 +20,7 @@ Vue.use(ElementUI)
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
-  router,   // 挂载
+  router,   // 注入路由，让整个应用都有路由功能
   store,    // 把 store 的实例注入所有的子组件
   components: { App },
   template: '<App/>'
