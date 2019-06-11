@@ -9,6 +9,7 @@ import HtmlTest from '@/components/HtmlTest'
 import FlexTest from '@/components/FlexTest'
 import CSSTest from '@/components/CSSTest'
 import StoreTest from '@/components/storeTest/storeMain'
+import QRCode from '@/components/QRCode'
 
 Vue.use(Router)
 
@@ -76,6 +77,11 @@ export default new Router({
       path: '/storetest',
       name: "StoreTest",
       component: StoreTest
+    },
+    {
+      path: '/qrcode',
+      name: "QRCode",
+      component: QRCode
     }
   ]
 })
